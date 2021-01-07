@@ -1,0 +1,22 @@
+{
+	"segments": {
+		"left": [
+			{
+				"function": "powerline.segments.common.env.user"
+			},
+			{
+				"function": "powerline.segments.common.net.hostname"
+			},
+			{
+				"function": "powerline.segments.shell.cwd",
+				"priority": 10
+			},
+			{
+				"function": "powerline.segments.common.vcs.branch",
+				"args": {
+					"status_colors": true
+				}
+			}
+		]
+	}
+}
