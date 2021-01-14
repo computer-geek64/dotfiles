@@ -183,6 +183,8 @@ bindsym $mod+r mode "resize"
 # Modified
 exec --no-startup-id /usr/bin/nvidia-settings -a "[gpu:0]/GPUFanControlState=1"
 exec --no-startup-id /usr/bin/polybar statusbar
+exec --no-startup-id "cd ~/.conky && conky -c panel.conf"
+exec --no-startup-id "cd ~/.conky && conky -c temp.conf"
 exec --no-startup-id /usr/bin/nitrogen --restore
 exec --no-startup-id xautolock -time 3 -corners 00-- -locker "/opt/bin/i3lock-fancy.sh"
 exec --no-startup-id "/usr/bin/compton --config ~/.config/compton/compton.conf"
