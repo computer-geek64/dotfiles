@@ -16,9 +16,6 @@ export PATH
 # export SYSTEMD_PAGER=
 
 # User specific aliases and functions
-export PATH="$PATH:/opt/bin"
-export EDITOR="/usr/bin/vim"
-
 alias grep='grep --color=auto'
 alias python3='python3 -B'
 alias cnn='youtube-dl $(youtube-dl -g https://www.livenewsnow.com/american/cnn-news-usa.html --add-header "Referer: https://www.livenewsnow.com/" --no-warnings) --add-header "Referer: https://www.livenewsnow.com/" -o - | mpv -'
