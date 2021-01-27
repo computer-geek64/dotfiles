@@ -10,9 +10,9 @@ set scrolloff=10
 set history=200
 set shell=/bin/bash
 au CursorHoldI * stopinsert
-command Latex w | !pdflatex '%:t'; rm *.aux *.log
-command C w | !gcc '%:t'; ./a.out
-command Cpp w | !g++ '%:t'; ./a.out
+command Latex w | !pdflatex '%'; rm *.aux *.log
+command C w | !gcc '%'; ./a.out
+command Cpp w | !g++ '%'; ./a.out
 command Hex %!xxd
 command Unhex %!xxd -r
 
