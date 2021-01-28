@@ -15,6 +15,7 @@ command C w | !gcc '%'; ./a.out
 command Cpp w | !g++ '%'; ./a.out
 command Hex %!xxd
 command Unhex %!xxd -r
+map <F1> :Latex<Enter>
 
 python3 from powerline.vim import setup as powerline_setup
 python3 powerline_setup()
