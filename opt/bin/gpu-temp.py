@@ -1,5 +1,5 @@
-#!/usr/bin/python3
-# gpu_temp.py
+#!/usr/bin/python3 -B
+# gpu-temp.py
 
 from subprocess import Popen, PIPE
 
@@ -28,13 +28,13 @@ elif temperature < 40:
     # Decrease fan speed by 5%
     fan_speed = fan_speed - 5 if fan_speed - 5 > 18 else 18
     Popen(['nvidia-settings', '-a', '[fan:0]/GPUTargetFanSpeed={fan_speed}'.format(fan_speed=fan_speed)], stdout=PIPE, stderr=PIPE).wait()
-elif temperature < 50:
+elif temperature < 60:
     # Keep fan speed the same
     pass
-elif temperature < 60:
-    # Increase fan speed by 5%
-    fan_speed = fan_speed + 5 if fan_speed + 5 < 100 else 100
-    Popen(['nvidia-settings', '-a', '[fan:0]/GPUTargetFanSpeed={fan_speed}'.format(fan_speed=fan_speed)], stdout=PIPE, stderr=PIPE).wait()
+#elif temperature < 60:
+#    # Increase fan speed by 5%
+#    fan_speed = fan_speed + 5 if fan_speed + 5 < 100 else 100
+#    Popen(['nvidia-settings', '-a', '[fan:0]/GPUTargetFanSpeed={fan_speed}'.format(fan_speed=fan_speed)], stdout=PIPE, stderr=PIPE).wait()
 elif temperature < 70:
     # Increase fan speed by 10%
     fan_speed = fan_speed + 10 if fan_speed + 10 < 100 else 100
