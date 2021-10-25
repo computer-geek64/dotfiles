@@ -19,7 +19,8 @@ export PATH
 alias grep='grep --color=auto'
 alias python3='python3 -B'
 alias cnn='youtube-dl $(youtube-dl -g https://www.livenewsnow.com/american/cnn-news-usa.html --add-header "Referer: https://www.livenewsnow.com/" --no-warnings) --add-header "Referer: https://www.livenewsnow.com/" -o - | mpv -'
-alias latex-start='cp /home/ashish/git/latex-templates/notes.tex'
+alias latex-start='cp /home/ashish/git/latex/src/notes.tex'
+alias git='cat /home/ashish/.gh_token | xsel -i && git'
 alias bluetooth-headset='bluetoothctl connect 94:DB:56:17:64:D5'
 
 cat /etc/motd
