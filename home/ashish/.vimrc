@@ -10,7 +10,7 @@ set scrolloff=10
 set history=200
 set shell=/bin/bash
 au CursorHoldI * stopinsert
-command Latex exec "w" | exec "!docker run -it --volume \"$(pwd)\":/code/mountpoint latex '%'; rm -f %:r.aux %:r.log"
+command Latex exec "w" | exec "!docker run -it --volume \"$(pwd)\":/code/mountpoint --name latex --rm latex '%'; rm -f %:r.aux %:r.log"
 command -nargs=1 LatexScreenshot :silent exec "!mkdir -p 'images' && scrot 'images/<args>.png'" | exec ":normal i\\includegraphics[width=\\textwidth]{<args>.png}<ESC>"
 command C w | !gcc '%'; ./a.out
 command Cpp w | !g++ '%'; ./a.out
