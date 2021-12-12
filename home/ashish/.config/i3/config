@@ -200,6 +200,7 @@ bindsym $mod+q exec "/opt/bin/i3last-scratchpad.py"
 bindsym $mod+c exec xclip -selection clipboard -o | qrencode -s 10 -o - | feh -FZ -
 bindsym $mod+x exec --no-startup-id "/opt/bin/minecraft_mlg.sh"
 bindsym $mod+Shift+x exec --no-startup-id "killall minecraft_mlg.sh"
+bindsym $mod+Shift+s sticky toggle
 
 gaps inner 40
 for_window [class=".*"] border pixel 0
