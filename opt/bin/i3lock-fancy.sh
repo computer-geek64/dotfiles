@@ -13,13 +13,13 @@ if [[ $(cat "${file}") == '0' ]]; then
   --screen 1 \
   --blur 3 \
   --clock \
-  --insidecolor ffffff22 \
-  --ringcolor 0074d9 \
-  --keyhlcolor ff4136 \
-  --bshlcolor ff4136 \
-  --ringvercolor 01ff70 \
-  --insidevercolor ffffff22 \
-  --veriftext 'Verifying...' \
-  --wrongtext 'Fuck off'
+  --inside-color ffffff22 \
+  --ring-color 0074d9 \
+  --keyhl-color ff4136 \
+  --bshl-color ff4136 \
+  --ringver-color 01ff70 \
+  --insidever-color ffffff22 \
+  --verif-text 'Verifying...' \
+  --wrong-text 'Fuck off'
   echo '0' > "${file}"
 fi

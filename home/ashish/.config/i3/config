@@ -105,40 +105,40 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
-set $ws10 "10"
+#set $ws1 "1"
+#set $ws2 "2"
+#set $ws3 "3"
+#set $ws4 "4"
+#set $ws5 "5"
+#set $ws6 "6"
+#set $ws7 "7"
+#set $ws8 "8"
+#set $ws9 "9"
+#set $ws10 "10"
 
 # switch to workspace
-bindsym $mod+1 workspace number $ws1
-bindsym $mod+2 workspace number $ws2
-bindsym $mod+3 workspace number $ws3
-bindsym $mod+4 workspace number $ws4
-bindsym $mod+5 workspace number $ws5
-bindsym $mod+6 workspace number $ws6
-bindsym $mod+7 workspace number $ws7
-bindsym $mod+8 workspace number $ws8
-bindsym $mod+9 workspace number $ws9
-bindsym $mod+0 workspace number $ws10
+#bindsym $mod+1 workspace number $ws1
+#bindsym $mod+2 workspace number $ws2
+#bindsym $mod+3 workspace number $ws3
+#bindsym $mod+4 workspace number $ws4
+#bindsym $mod+5 workspace number $ws5
+#bindsym $mod+6 workspace number $ws6
+#bindsym $mod+7 workspace number $ws7
+#bindsym $mod+8 workspace number $ws8
+#bindsym $mod+9 workspace number $ws9
+#bindsym $mod+0 workspace number $ws10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace number $ws1
-bindsym $mod+Shift+2 move container to workspace number $ws2
-bindsym $mod+Shift+3 move container to workspace number $ws3
-bindsym $mod+Shift+4 move container to workspace number $ws4
-bindsym $mod+Shift+5 move container to workspace number $ws5
-bindsym $mod+Shift+6 move container to workspace number $ws6
-bindsym $mod+Shift+7 move container to workspace number $ws7
-bindsym $mod+Shift+8 move container to workspace number $ws8
-bindsym $mod+Shift+9 move container to workspace number $ws9
-bindsym $mod+Shift+0 move container to workspace number $ws10
+#bindsym $mod+Shift+1 move container to workspace number $ws1
+#bindsym $mod+Shift+2 move container to workspace number $ws2
+#bindsym $mod+Shift+3 move container to workspace number $ws3
+#bindsym $mod+Shift+4 move container to workspace number $ws4
+#bindsym $mod+Shift+5 move container to workspace number $ws5
+#bindsym $mod+Shift+6 move container to workspace number $ws6
+#bindsym $mod+Shift+7 move container to workspace number $ws7
+#bindsym $mod+Shift+8 move container to workspace number $ws8
+#bindsym $mod+Shift+9 move container to workspace number $ws9
+#bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -181,13 +181,62 @@ bindsym $mod+r mode "resize"
 #}
 
 # Modified
-exec --no-startup-id /usr/bin/nvidia-settings -a "[gpu:0]/GPUFanControlState=1"
+# Define names for workspaces
+set $ws1 "1:Primary"
+set $ws2 "2:Secondary"
+set $ws3 "3:Tertiary"
+set $ws4 "4:Quarternary"
+set $ws5 "5:Quinary"
+set $ws6 "6:Suspended"
+set $ws7 "7:System"
+set $ws8 "8:Messaging"
+set $ws9 "9:Gaming"
+set $ws10 "10:Videos"
+
+# Set screen output for workspaces
+#workspace "1:Primary" output DP-0
+#workspace "2:Secondary" output HDMI-0
+#workspace "3:Tertiary" output DP-0
+#workspace "4:Quarternary" output DP-0
+#workspace "5:Quinary" output DP-0
+#workspace "6:Suspended" output DP-0
+#workspace "7:System" output DP-0
+#workspace "8:Messaging" output DP-0
+#workspace "9:Gaming" output DP-0
+#workspace "10:Videos" output DP-0
+
+# switch to workspace
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
+bindsym $mod+0 workspace number $ws10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9
+bindsym $mod+Shift+0 move container to workspace number $ws10
+
+
+#exec --no-startup-id /usr/bin/nvidia-settings -a "[gpu:0]/GPUFanControlState=1"
 exec --no-startup-id /usr/bin/polybar statusbar
-exec --no-startup-id "cd ~/.conky && conky -c panel.conf"
-exec --no-startup-id "cd ~/.conky && conky -c temp.conf"
+exec --no-startup-id "conky -c ~/.conky/panel.conf"
+exec --no-startup-id "conky -c ~/.conky/temp.conf"
 exec --no-startup-id /usr/bin/nitrogen --restore
-exec --no-startup-id xautolock -time 3 -corners 00-- -locker "/opt/bin/i3lock-fancy.sh"
-exec --no-startup-id "/usr/bin/compton --config ~/.config/compton/compton.conf"
+#exec --no-startup-id xautolock -time 3 -corners 00-- -locker "/opt/bin/i3lock-fancy.sh"
+exec --no-startup-id "/usr/bin/picom --experimental-backend --config ~/.config/picom/picom.conf"
 exec --no-startup-id "/usr/bin/redshift -t 6500:2500"
 
 bindsym $mod+l exec --no-startup-id "/opt/bin/i3lock-fancy.sh"
@@ -204,3 +253,4 @@ bindsym $mod+Shift+s sticky toggle
 
 gaps inner 40
 for_window [class=".*"] border pixel 0
+for_window [class="xpad"] floating enable

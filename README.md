@@ -4,7 +4,8 @@
 
 ## Dependencies
 * [i3-gaps](https://github.com/Airblader/i3) - Tiling window manager (fork of i3)
-* [compton](https://github.com/tryone144/compton) - X11 compositor with kawase blur functionality (fork by tryone144)
+* [picom](https://pkgs.com/download/picom) - X11 compositor fork from compton
+* [conky](https://aur.archlinux.org/packages/conky-git) - Conky Cairo lightweight system monitor
 * [i3lock-color](https://github.com/Raymo111/i3lock-color) - Fork of the i3 screen lock tool (with additional features)
 * [xautolock](https://pkgs.org/download/xautolock) - Automatic screen locking tool
 * [scrot](https://pkgs.org/download/scrot) - Screenshot tool
