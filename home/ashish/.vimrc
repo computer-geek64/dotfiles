@@ -9,7 +9,7 @@ set expandtab
 set scrolloff=10
 set history=200
 set shell=/bin/bash
-#au CursorHoldI * stopinsert
+"au CursorHoldI * stopinsert
 set ignorecase
 set smartcase
 
