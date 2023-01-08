@@ -194,16 +194,17 @@ set $ws9 "9:Gaming"
 set $ws10 "10:Videos"
 
 # Set screen output for workspaces
-#workspace "1:Primary" output DP-0
-#workspace "2:Secondary" output HDMI-0
-#workspace "3:Tertiary" output DP-0
-#workspace "4:Quarternary" output DP-0
-#workspace "5:Quinary" output DP-0
-#workspace "6:Suspended" output DP-0
-#workspace "7:System" output DP-0
-#workspace "8:Messaging" output DP-0
-#workspace "9:Gaming" output DP-0
-#workspace "10:Videos" output DP-0
+workspace "1:Primary" output HDMI-0
+workspace "2:Secondary" output DP-2
+workspace "3:Tertiary" output HDMI-0
+workspace "4:Quarternary" output HDMI-0
+workspace "5:Quinary" output HDMI-0
+workspace "6:Suspended" output HDMI-0
+workspace "7:System" output HDMI-0
+workspace "8:Messaging" output HDMI-0
+workspace "9:Gaming" output HDMI-0
+workspace "10:Videos" output HDMI-0
+
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -236,7 +237,7 @@ exec --no-startup-id "conky -c ~/.conky/panel.conf"
 exec --no-startup-id "conky -c ~/.conky/temp.conf"
 exec --no-startup-id /usr/bin/nitrogen --restore
 #exec --no-startup-id xautolock -time 3 -corners 00-- -locker "/opt/bin/i3lock-fancy.sh"
-exec --no-startup-id "/usr/bin/picom --experimental-backend --config ~/.config/picom/picom.conf"
+exec --no-startup-id "/usr/bin/picom --config ~/.config/picom/picom.conf"
 exec --no-startup-id "/usr/bin/redshift -t 6500:2500"
 
 bindsym $mod+l exec --no-startup-id "/opt/bin/i3lock-fancy.sh"
